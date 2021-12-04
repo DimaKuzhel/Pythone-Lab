@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+import numpy as np
+from math import sin
+from math import cos
+def f(x):
+  result= 2*x*sin(x) + x**2*cos(2*x)
+  return result
+x= np.linspace(0,10.0,100)
+y= 2*x*np.sin(x)
+y2= 2*x*np.sin(x) + x**2*np.cos(2*x)
+y3= f(2.7)
+plt.title('Variant11')
+plt.plot(x,y, label='x^2*sin(2x)')
+plt.plot(x,y2, label='x=0')
+plt.legend()
+plt.show()
